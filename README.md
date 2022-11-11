@@ -1,7 +1,6 @@
- 
-
 ### Ex. No. :7
-## Date: 05/11/2022
+## Name: SRINIVAS.U
+## Date: 
 ### Interfacing LM35 Temperature sensor and calculate the sensitivity of the output
 
 ## Aim: 
@@ -11,7 +10,7 @@ Proteus ISIS professional suite, Kiel μ vision 5 Development environment
  ![image](https://user-images.githubusercontent.com/36288975/200110365-9e1f8a55-c943-43f1-94de-60003f6308b7.png)
   
 Figure-01 ADC pins in LPC2148 ARM 7 controller 
- ## Theory:
+ ## Theory 
 Analog to Digital Converter (ADC) is used to convert analog signal into digital form. LPC2148 has two inbuilt 10-bit ADC i.e. ADC0 & ADC1.
 •	ADC0 has 6 channels &ADC1 has 8 channels.
 •	Hence, we can connect 6 distinct types of input analog signals to ADC0 and 8 distinct types of input analog signals to ADC1.
@@ -191,7 +190,8 @@ Low-Impedance Output, 0.1 Ω for 1-mA Load
 Figure -08 Circuit diagram of interfacing an LM35  with ADC input pin 
 
 ## Kiel - Program 
-~~~
+
+```
 #include<lpc214x.h>
 #include "LCD.h"
 #include "ADC.h"
@@ -212,30 +212,32 @@ int main()
 		dat((val%10)+48);
 	}
 }
-~~~
-## Output screen shots :
-## LCD Off:
-![EX7](https://user-images.githubusercontent.com/94828138/200113371-fdb9d4bc-c81f-43f0-9828-eea87692f5d1.png)
-
-## LCD On:
-![02](https://user-images.githubusercontent.com/94828138/200113404-14ff16c9-07f3-4201-b4d9-037016a89250.png)
-
-
-## Circuit Diagram:
-![3](https://user-images.githubusercontent.com/94828138/200113416-154f839f-976a-4193-a756-43a0751fcb02.png)
-
-
+```
+ 
 ## Tabulations and graph 
-### Calculation of sensitivity 
-% of sensitivity is   S=  (T2-T1)/(A2-A1)*100
+
+```
+Calculation of sensitivity % of sensitivity is   S=  (T2-T1)/(A2-A1)*100
+```
+
+![image](https://user-images.githubusercontent.com/94154683/200326081-e7932906-331b-4019-b948-497546751951.png)
+			
 
 
+ 
+Figure -09 graph between temperature values and ADC output 
+![image](https://user-images.githubusercontent.com/94154683/200326401-ea7b8aa8-a526-4816-92d4-0aea72cd8015.png)
 
-![5](https://user-images.githubusercontent.com/94828138/200113448-184f1f6f-974b-4b2b-9260-5fedbabd7f2b.png)
+## Output screen shots :
 
-### Graph between temperature values and ADC output :
-![4](https://user-images.githubusercontent.com/94828138/200113464-de5d66b8-b359-4128-b5b6-1019800d100d.png)
+### Display Off:
+![image](https://user-images.githubusercontent.com/94154683/200317938-0b79ddd5-d491-44c7-8ab0-4318d08faa57.png)
+
+### Display On:
+![image](https://user-images.githubusercontent.com/94154683/200317850-24f34f6a-6075-4f0f-9a1f-23d3d91bba11.png)
+
+### Layout Diagram:
+![image](https://user-images.githubusercontent.com/94154683/200319418-507c4176-2571-47b6-87f7-b12ded31618a.png)
 
 ## Result :
 Temperature sensor LM35 is interfaced to LPC2148 and its output is measured 
-
